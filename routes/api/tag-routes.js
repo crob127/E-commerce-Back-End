@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   try {
-    const tag = await Tag.findOne(req.params.id, {
+    const tag = await Tag.findOne({
       where: {
         id: req.params.id,
       },
